@@ -5,7 +5,7 @@ using UnityEngine;
 public class Movement : MonoBehaviour
 {
     Rigidbody rb;
-    [SerializeField]float mainThrust = 100f;
+    [SerializeField]float mainThrust = 110f;
     [SerializeField]float rotationThrust = 100f;
     void Start()
     {
