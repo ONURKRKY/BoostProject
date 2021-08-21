@@ -7,8 +7,10 @@ public class Movement : MonoBehaviour
     Rigidbody rb;
     [SerializeField]float mainThrust = 110f;
     [SerializeField]float rotationThrust = 100f;
+    [SerializeField]AudioClip mainEngine;
     AudioSource audioSource;
-    
+
+   
     void Start()
     {
         rb=GetComponent<Rigidbody>();
@@ -29,7 +31,7 @@ public class Movement : MonoBehaviour
         rb.AddRelativeForce(Vector3.up * mainThrust * Time.deltaTime) ;
         if(!audioSource.isPlaying)
         {
-        audioSource.Play();
+        audioSource.PlayOneShot(mainEngine);
         }
     }else
     {
